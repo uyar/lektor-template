@@ -1,0 +1,14 @@
+{
+  "en": {
+    "_name": "English",
+    "logo-alt": "TEXT DESCRIBING THE SITE LOGO",
+    "pagination-next": "Next",
+    "pagination-prev": "Previous"
+  },
+  "tr": {
+    "_name": "Türkçe",
+    "logo-alt": "SİTE LOGOSUNU TARİF EDEN METİN",
+    "pagination-next": "Sonraki",
+    "pagination-prev": "Önceki"
+  }
+}

@@ -1,0 +1,12 @@
+[project]
+name = SITE NAME
+
+[alternatives.en]
+name = English
+locale = en_US
+primary = yes
+
+[alternatives.tr]
+name = Türkçe
+locale = tr_TR
+url_prefix = /tr/

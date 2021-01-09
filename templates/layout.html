@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ this.alt }}">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{{ this.title }} — {{ config.PROJECT.name }}</title>
+  <link rel="shortcut icon" href="{{ '/static/favicon.svg'|url }}" type="image/svg"/>
+  <link rel="stylesheet" href="{{ '/static/custom.css'|url }}"/>
+</head>
+<body>
+  <header>
+    <nav aria-label="main navigation">
+      <a href="{{ '/'|url(this.alt) }}">
+        <img
+          src="{{ '/static/logo.svg'|url }}"
+          alt="{{ bag('translate', this.alt, 'logo-alt') }}"
+          width="100" height="100"/>
+      </a>
+      <ul>
+        {% for slug in bag('menus', 'main-nav') %}
+          {% set page = site.get('/' + slug, alt=this.alt) %}
+          <li{% if this.is_child_of(page) %} class="active"{% endif%}>
+            <a href="{{ page|url }}">{{ page.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul>
+        {% for alt in get_alts(this) %}
+          <li{% if alt == this.alt %} class="active"{% endif %}>
+            <a href="{{ '.'|url(alt=alt) }}">{{ bag('translate', alt, "_name") }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block body %}{% endblock %}
+  </main>
+  <footer>
+    <small>
+      &copy; H. Turgut Uyar, 2021
+    </small>
+  </footer>
+</body>
+</html>
