@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{{ this.title }} — {{ config.PROJECT.name }}</title>
+  <title>{% if this.title %}{{ this.title }} — {% endif %}{{ config.PROJECT.name }}</title>
   <link rel="shortcut icon" href="{{ '/static/favicon.svg'|url }}" type="image/svg"/>
   <link rel="stylesheet" href="{{ '/static/main.css'|url }}"/>
 </head>
