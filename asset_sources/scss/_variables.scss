@@ -1,0 +1,63 @@
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$grey: hsl(0, 0%, 50%);
+$blue: hsl(240, 100%, 50%);
+$teal: hsl(180, 100%, 25%);
+
+$sans-serif: "Source Sans Pro";
+$serif: "Source Serif Pro";
+$monospace: "Source Code Pro";
+
+:root {
+  --color-bg: #{$white};
+  --color-text: #{$black};
+  --color-link: #{$blue};
+  --color-primary: #{$teal};
+  --color-primary-contrast: #{$white};
+
+  --font-family:
+      #{$sans-serif},
+      system-ui,
+      /* macOS 10.11-10.12 */ -apple-system,
+      /* Windows 6+ */ "Segoe UI",
+      /* Android 4+ */ "Roboto",
+      /* Ubuntu 10.10+ */ "Ubuntu",
+      /* Gnome 3+ */ "Cantarell",
+      /* KDE Plasma 5+ */ "Noto Sans",
+      /* fallback */ sans-serif,
+      /* macOS emoji */ "Apple Color Emoji",
+      /* Windows emoji */ "Segoe UI Emoji",
+      /* Windows emoji */ "Segoe UI Symbol",
+      /* Linux emoji */ "Noto Color Emoji";
+  --font-family-mono:
+      #{$monospace},
+      /* macOS 10.10+ */ "Menlo",
+      /* Windows 6+ */ "Consolas",
+      /* Android 4+ */ "Roboto Mono",
+      /* Ubuntu 10.10+ */ "Ubuntu Monospace",
+      /* KDE Plasma 5+ */ "Noto Mono",
+      /* KDE Plasma 4+ */ "Oxygen Mono",
+      /* Linux/OpenOffice fallback */ "Liberation Mono",
+      /* fallback */ monospace,
+      /* macOS emoji */ "Apple Color Emoji",
+      /* Windows emoji */ "Segoe UI Emoji",
+      /* Windows emoji */ "Segoe UI Symbol",
+      /* Linux emoji */ "Noto Color Emoji";
+  
+  --width-content: 60ch;
+
+  --space-xs: 0.25rem;
+  --space-s: calc(2 * var(--space-xs));
+  --space-m: calc(4 * var(--space-xs));
+  --space-l: calc(8 * var(--space-xs));
+  --space-xl: calc(16 * var(--space-xs));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #{$black};
+    --color-text: #{$white};
+    --color-primary: #{$teal};
+    --color-primary-contrast: #{$black};
+  }
+}

@@ -10,3 +10,6 @@ primary = yes
 name = Türkçe
 locale = tr_TR
 url_prefix = /tr/
+
+[packages]
+lektor-scsscompile = 1.3.0

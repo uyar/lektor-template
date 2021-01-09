@@ -1,0 +1,33 @@
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+body > footer,
+body > header {
+  padding: var(--space-m);
+}
+
+body > main > * {
+  margin: 0 var(--space-m);
+  max-width: var(--width-content);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+nav.alternatives {
+  font-size: 0.85em;
+}
+
+@media (min-width: 769px) {
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav ul li + li {
+    margin-inline-start: 0.5em;
+  }
+}
