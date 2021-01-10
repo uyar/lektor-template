@@ -3,13 +3,13 @@ a {
   text-decoration: none;
 }
 
-body > footer,
-body > header {
+header,
+footer {
   padding: var(--space-m);
 }
 
-body > main > * {
-  margin: 0 var(--space-m);
+main > * {
+  margin: 0 auto;
   max-width: var(--width-content);
 }
 
@@ -18,8 +18,8 @@ nav ul {
   flex-direction: column;
 }
 
-nav.alternatives {
-  font-size: 0.85em;
+nav.alternatives li a {
+  font-size: 85%;
 }
 
 @media (min-width: 769px) {
@@ -28,6 +28,6 @@ nav.alternatives {
   }
 
   nav ul li + li {
-    margin-inline-start: 0.5em;
+    margin-inline-start: var(--space-s);
   }
 }

@@ -1,6 +1,6 @@
 $black: hsl(0, 0%, 0%);
 $white: hsl(0, 0%, 100%);
-$grey: hsl(0, 0%, 50%);
+$gray: hsl(0, 0%, 50%);
 $blue: hsl(240, 100%, 50%);
 $teal: hsl(180, 100%, 25%);
 
@@ -13,7 +13,6 @@ $monospace: "Source Code Pro";
   --color-text: #{$black};
   --color-link: #{$blue};
   --color-primary: #{$teal};
-  --color-primary-contrast: #{$white};
 
   --font-family:
       #{$sans-serif},
@@ -57,7 +56,5 @@ $monospace: "Source Code Pro";
   :root {
     --color-bg: #{$black};
     --color-text: #{$white};
-    --color-primary: #{$teal};
-    --color-primary-contrast: #{$black};
   }
 }
