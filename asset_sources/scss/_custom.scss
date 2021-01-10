@@ -4,11 +4,12 @@ a {
 }
 
 header,
-footer {
-  padding: var(--space-m);
+footer,
+section {
+  padding: var(--space-s) var(--space-m);
 }
 
-main > * {
+section {
   margin: 0 auto;
   max-width: var(--width-content);
 }
@@ -16,10 +17,6 @@ main > * {
 nav ul {
   display: flex;
   flex-direction: column;
-}
-
-nav.alternatives li a {
-  font-size: 85%;
 }
 
 @media (min-width: 769px) {
