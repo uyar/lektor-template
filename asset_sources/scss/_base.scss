@@ -1,16 +1,19 @@
+/* Sections
+ * ========================================================================== */
+
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
 }
 
-a {
-  color: var(--color-link);
-  text-decoration: none;
-}
+/* Grouping content
+ * ========================================================================== */
 
-header,
-footer {
-  padding: var(--space-s) unquote('max(var(--space-m), calc(50% - 0.5 * var(--width-full)))');
+footer,
+header {
+  padding:
+      var(--space-s)
+      unquote('max(var(--space-m), calc(50% - 0.5 * var(--width-full)))');
 }
 
 main {
@@ -24,13 +27,28 @@ nav ul {
   flex-direction: column;
 }
 
+/* Text-level semantics
+ * ========================================================================== */
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+/* Media queries
+ * ========================================================================== */
+
 @media (min-width: 60ch) {
+  nav img {
+    margin-inline-end: var(--space-m);
+  }
+
   nav ul {
     display: inline-flex;
     flex-direction: row;
   }
 
-  nav ul li {
+  nav ul li + li {
     margin-inline-start: var(--space-m);
   }
 }

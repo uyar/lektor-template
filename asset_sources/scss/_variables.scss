@@ -3,9 +3,6 @@ $white: hsl(0, 0%, 100%);
 $orange: hsl(40, 100%, 50%);
 $blue: hsl(240, 100%, 50%);
 
-$black-dilute: lighten($black, 40%);
-$orange-dilute: lighten($orange, 20%);
-
 $sans-serif: "Source Sans Pro";
 $serif: "Source Serif Pro";
 $monospace: "Source Code Pro";
@@ -13,7 +10,7 @@ $monospace: "Source Code Pro";
 :root {
   --color-bg: #{$white};
   --color-text: #{$black};
-  --color-primary: #{$orange-dilute};
+  --color-primary: #{$orange};
   --color-link: #{$blue};
 
   --font-family:
@@ -59,6 +56,5 @@ $monospace: "Source Code Pro";
   :root {
     --color-bg: #{$black};
     --color-text: #{$white};
-    --color-primary: #{$orange};
   }
 }
