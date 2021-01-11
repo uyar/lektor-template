@@ -1,9 +1,8 @@
 :root {
   --color-bg: white;
   --color-text: black;
+  --color-primary: #ffcc66;
   --color-link: blue;
-  --color-primary: teal;
-  --color-primary-contrast: white;
   --font-family:
       Source Sans Pro,
       system-ui,
@@ -33,6 +32,7 @@
       /* Windows emoji */ "Segoe UI Symbol",
       /* Linux emoji */ "Noto Color Emoji";
   --width-content: 60ch;
+  --width-full: calc(1.5 * var(--width-content));
   --space-xs: 0.25rem;
   --space-s: calc(2 * var(--space-xs));
   --space-m: calc(4 * var(--space-xs));
@@ -43,8 +43,7 @@
   :root {
     --color-bg: black;
     --color-text: white;
-    --color-primary: teal;
-    --color-primary-contrast: black; } }
+    --color-primary: #ffaa00; } }
 
 /* Document
  * ========================================================================== */
@@ -654,27 +653,38 @@ select:not([multiple]):not([size]) {
     transition-duration: 0s !important;
     /* 4 */ } }
 
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text); }
+
 a {
   color: var(--color-link);
   text-decoration: none; }
 
-body > footer,
-body > header {
-  padding: var(--space-m); }
+header,
+footer {
+  padding: var(--space-s) max(var(--space-m), calc(50% - 0.5 * var(--width-full))); }
 
-body > main > * {
-  margin: 0 var(--space-m);
-  max-width: var(--width-content); }
+main {
+  margin: 0 auto;
+  max-width: var(--width-content);
+  padding: var(--space-s) var(--space-m); }
 
 nav ul {
   display: flex;
   flex-direction: column; }
 
-nav.alternatives {
-  font-size: 0.85em; }
-
-@media (min-width: 769px) {
+@media (min-width: 60ch) {
   nav ul {
+    display: inline-flex;
     flex-direction: row; }
-  nav ul li + li {
-    margin-inline-start: 0.5em; } }
+  nav ul li {
+    margin-inline-start: var(--space-m); } }
+
+footer {
+  text-align: center; }
+
+nav.alternatives {
+  font-size: 0.8em;
+  text-align: right;
+  text-transform: lowercase; }

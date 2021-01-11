@@ -1,0 +1,36 @@
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+header,
+footer {
+  padding: var(--space-s) unquote('max(var(--space-m), calc(50% - 0.5 * var(--width-full)))');
+}
+
+main {
+  margin: 0 auto;
+  max-width: var(--width-content);
+  padding: var(--space-s) var(--space-m);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 60ch) {
+  nav ul {
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  nav ul li {
+    margin-inline-start: var(--space-m);
+  }
+}

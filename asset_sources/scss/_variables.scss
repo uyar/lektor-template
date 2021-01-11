@@ -1,8 +1,10 @@
 $black: hsl(0, 0%, 0%);
 $white: hsl(0, 0%, 100%);
-$gray: hsl(0, 0%, 50%);
+$orange: hsl(40, 100%, 50%);
 $blue: hsl(240, 100%, 50%);
-$teal: hsl(180, 100%, 25%);
+
+$black-dilute: lighten($black, 40%);
+$orange-dilute: lighten($orange, 20%);
 
 $sans-serif: "Source Sans Pro";
 $serif: "Source Serif Pro";
@@ -11,8 +13,8 @@ $monospace: "Source Code Pro";
 :root {
   --color-bg: #{$white};
   --color-text: #{$black};
+  --color-primary: #{$orange-dilute};
   --color-link: #{$blue};
-  --color-primary: #{$teal};
 
   --font-family:
       #{$sans-serif},
@@ -42,8 +44,9 @@ $monospace: "Source Code Pro";
       /* Windows emoji */ "Segoe UI Emoji",
       /* Windows emoji */ "Segoe UI Symbol",
       /* Linux emoji */ "Noto Color Emoji";
-  
+
   --width-content: 60ch;
+  --width-full: calc(1.5 * var(--width-content));
 
   --space-xs: 0.25rem;
   --space-s: calc(2 * var(--space-xs));
@@ -56,5 +59,6 @@ $monospace: "Source Code Pro";
   :root {
     --color-bg: #{$black};
     --color-text: #{$white};
+    --color-primary: #{$orange};
   }
 }
