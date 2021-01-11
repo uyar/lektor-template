@@ -1,5 +1,5 @@
 [project]
-name = SITE NAME
+name = SITE_NAME
 
 [alternatives.en]
 name = English
