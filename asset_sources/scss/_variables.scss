@@ -42,14 +42,18 @@ $monospace: "Source Code Pro";
       /* Windows emoji */ "Segoe UI Symbol",
       /* Linux emoji */ "Noto Color Emoji";
 
-  --width-content: 60ch;
-  --width-full: calc(1.5 * var(--width-content));
-
   --space-xs: 0.25rem;
   --space-s: calc(2 * var(--space-xs));
   --space-m: calc(4 * var(--space-xs));
   --space-l: calc(8 * var(--space-xs));
   --space-xl: calc(16 * var(--space-xs));
+
+  --width-content: 60ch;
+  --width-full: calc(1.5 * var(--width-content));
+
+  --padding-content:
+      var(--space-s)
+      max(var(--space-m), calc(50% - 0.5 * var(--width-full)));
 }
 
 @media (prefers-color-scheme: dark) {

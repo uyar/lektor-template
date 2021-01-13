@@ -9,22 +9,20 @@ body {
 /* Grouping content
  * ========================================================================== */
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 footer,
-header {
-  padding:
-      var(--space-s)
-      unquote('max(var(--space-m), calc(50% - 0.5 * var(--width-full)))');
+header,
+main {
+  padding: var(--padding-content);
 }
 
 main {
   margin: 0 auto;
   max-width: var(--width-content);
-  padding: var(--space-s) var(--space-m);
-}
-
-nav ul {
-  display: flex;
-  flex-direction: column;
 }
 
 /* Text-level semantics
@@ -33,22 +31,4 @@ nav ul {
 a {
   color: var(--color-link);
   text-decoration: none;
-}
-
-/* Media queries
- * ========================================================================== */
-
-@media (min-width: 60ch) {
-  nav img {
-    margin-inline-end: var(--space-m);
-  }
-
-  nav ul {
-    display: inline-flex;
-    flex-direction: row;
-  }
-
-  nav ul li + li {
-    margin-inline-start: var(--space-m);
-  }
 }

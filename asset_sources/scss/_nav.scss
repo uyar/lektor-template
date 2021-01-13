@@ -1,0 +1,22 @@
+nav ul {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Media queries
+ * ========================================================================== */
+
+@media (min-width: 60ch) {
+  nav img {
+    margin-inline-end: var(--space-m);
+  }
+
+  nav ul {
+    display: inline-flex;
+    flex-direction: row;
+  }
+
+  nav ul li + li {
+    margin-inline-start: var(--space-m);
+  }
+}
