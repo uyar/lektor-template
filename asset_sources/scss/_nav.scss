@@ -1,6 +1,26 @@
-nav ul {
+nav ul,
+nav ul li:hover ul {
   display: flex;
   flex-direction: column;
+}
+
+nav ul li {
+  padding: var(--space-xs) var(--space-m);
+  position: relative;
+}
+
+nav ul li ul {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: var(--space-l);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+nav ul li ul li {
+  margin: 0;
+  padding: var(--space-s) var(--space-m);
 }
 
 /* Media queries
@@ -17,6 +37,6 @@ nav ul {
   }
 
   nav ul li + li {
-    margin-inline-start: var(--space-m);
+    margin-inline-start: var(--space-s);
   }
 }
