@@ -1,9 +1,22 @@
-/* Sections
+/* Layout
  * ========================================================================== */
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
+}
+
+header,
+footer {
+  padding:
+      var(--space-m)
+      unquote('max(var(--space-m), calc(50% - 0.5 * var(--width-full)))');
+}
+
+main {
+  max-width: var(--width-content);
+  margin: 0 auto;
+  padding: var(--space-m) var(--space-m);
 }
 
 /* Grouping content
@@ -12,17 +25,6 @@ body {
 figure {
   margin: 0;
   padding: 0;
-}
-
-footer,
-header,
-main {
-  padding: var(--padding-content);
-}
-
-main {
-  margin: 0 auto;
-  max-width: var(--width-content);
 }
 
 /* Text-level semantics

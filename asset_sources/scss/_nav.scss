@@ -1,10 +1,11 @@
-nav ul,
-nav ul li:hover ul {
+nav ul {
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 
 nav ul li {
+  height: var(--space-l);
   padding: var(--space-xs) var(--space-m);
   position: relative;
 }
@@ -18,7 +19,12 @@ nav ul li ul {
   z-index: 2;
 }
 
+nav ul li:hover ul {
+  display: inherit;
+}
+
 nav ul li ul li {
+  height: auto;
   margin: 0;
   padding: var(--space-s) var(--space-m);
 }
@@ -26,7 +32,7 @@ nav ul li ul li {
 /* Media queries
  * ========================================================================== */
 
-@media (min-width: 60ch) {
+@media (min-width: 60em) {
   nav img {
     margin-inline-end: var(--space-m);
   }

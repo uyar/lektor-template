@@ -48,12 +48,8 @@ $monospace: "Source Code Pro";
   --space-l: calc(8 * var(--space-xs));
   --space-xl: calc(16 * var(--space-xs));
 
-  --width-content: 60ch;
+  --width-content: 60em;
   --width-full: calc(1.5 * var(--width-content));
-
-  --padding-content:
-      var(--space-s)
-      max(var(--space-m), calc(50% - 0.5 * var(--width-full)));
 }
 
 @media (prefers-color-scheme: dark) {
