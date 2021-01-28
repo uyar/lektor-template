@@ -5,18 +5,18 @@ nav ul {
 }
 
 nav ul li {
+  position: relative;
   height: var(--space-l);
   padding: var(--space-xs) var(--space-m);
-  position: relative;
 }
 
 nav ul li ul {
-  display: none;
-  left: 0;
   position: absolute;
   top: var(--space-l);
-  white-space: nowrap;
+  left: 0;
   z-index: 2;
+  display: none;
+  white-space: nowrap;
 }
 
 nav ul li:hover ul {

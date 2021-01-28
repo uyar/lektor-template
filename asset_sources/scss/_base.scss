@@ -19,7 +19,15 @@ main {
   padding: var(--space-m) var(--space-m);
 }
 
-/* Grouping content
+/* Text-level semantics
+ * ========================================================================== */
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+/* Assets
  * ========================================================================== */
 
 figure {
@@ -27,10 +35,6 @@ figure {
   padding: 0;
 }
 
-/* Text-level semantics
- * ========================================================================== */
-
-a {
-  color: var(--color-link);
-  text-decoration: none;
+main img {
+  content-visibility: auto;
 }
