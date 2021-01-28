@@ -1,0 +1,243 @@
+{
+    "exclude": [
+        ".git/**",
+        "node_modules/**",
+        "bower_components/**"
+    ],
+    "always-semicolon": true,
+    "block-indent": "  ",
+    "color-case": "lower",
+    "color-shorthand": true,
+    "element-case": "lower",
+    "eof-newline": true,
+    "leading-zero": true,
+    "quotes": "single",
+    "remove-empty-rulesets": true,
+    "space-after-colon": " ",
+    "space-after-combinator": " ",
+    "space-after-opening-brace": "\n",
+    "space-after-selector-delimiter": "\n",
+    "space-before-closing-brace": "\n",
+    "space-before-colon": "",
+    "space-before-combinator": " ",
+    "space-before-opening-brace": " ",
+    "space-before-selector-delimiter": "",
+    "strip-spaces": true,
+    "unitless-zero": true,
+    "vendor-prefix-align": true,
+    "sort-order": [
+        [
+            "position",
+
+            "top",
+            "right",
+            "bottom",
+            "left",
+
+            "inset",
+            "inset-block",
+            "inset-block-start",
+            "inset-block-end",
+            "inset-inline",
+            "inset-inline-start",
+            "inset-inline-end",
+
+            "z-index",
+
+            "display",
+            "visibility",
+
+            "float",
+            "clear",
+
+            "overflow",
+
+            "overflow-x",
+            "overflow-y",
+
+            "overflow-block",
+            "overflow-inline",
+
+            "flex",
+            "flex-basis",
+            "flex-grow",
+            "flex-shrink",
+
+            "flex-flow",
+            "flex-direction",
+            "flex-wrap",
+
+            "justify-content",
+
+            "align-content",
+            "align-items",
+            "align-self",
+
+            "width",
+            "max-width",
+            "min-width",
+            "height",
+            "max-height",
+            "min-height",
+
+            "block-size",
+            "max-block-size",
+            "min-block-size",
+            "inline-size",
+            "max-inline-size",
+            "min-inline-size",
+
+            "margin",
+            "margin-top",
+            "margin-right",
+            "margin-bottom",
+            "margin-left",
+
+            "margin-block",
+            "margin-block-start",
+            "margin-block-end",
+            "margin-inline",
+            "margin-inline-start",
+            "margin-inline-end",
+
+            "padding",
+            "padding-top",
+            "padding-right",
+            "padding-bottom",
+            "padding-left",
+
+            "padding-block",
+            "padding-block-start",
+            "padding-block-end",
+            "padding-inline",
+            "padding-inline-start",
+            "padding-inline-end",
+
+            "content",
+
+            "background",
+            "background-color",
+            "background-image",
+            "background-repeat",
+            "background-size",
+
+            "color",
+            "opacity",
+
+            "clip-path",
+            "filter",
+            "mix-blend-mode",
+
+            "object-fit",
+            "object-position",
+
+            "font",
+            "font-family",
+            "font-size",
+            "font-size-adjust",
+            "font-style",
+            "font-weight",
+
+            "line-height",
+
+            "letter-spacing",
+            "word-spacing",
+
+            "text-align",
+            "text-align-last",
+            "vertical-align",
+            "text-indent",
+            "text-justify",
+            "text-overflow",
+
+            "text-decoration",
+            "text-decoration-color",
+            "text-decoration-line",
+            "text-decoration-style",
+
+            "text-shadow",
+            "text-transform",
+
+            "white-space",
+            "word-break",
+            "word-wrap",
+
+            "list-style",
+            "list-style-image",
+            "list-style-position",
+            "list-style-type",
+
+            "border-collapse",
+            "border-spacing",
+            "caption-side",
+
+            "border",
+            "border-color",
+            "border-style",
+            "border-width",
+
+            "border-top",
+            "border-top-color",
+            "border-top-style",
+            "border-top-width",
+
+            "border-right",
+            "border-right-color",
+            "border-right-style",
+            "border-right-width",
+
+            "border-bottom",
+            "border-bottom-color",
+            "border-bottom-style",
+            "border-bottom-width",
+
+            "border-left",
+            "border-left-color",
+            "border-left-style",
+            "border-left-width",
+
+            "border-block",
+            "border-block-color",
+            "border-block-style",
+            "border-block-width",
+
+            "border-block-start",
+            "border-block-start-color",
+            "border-block-start-style",
+            "border-block-start-width",
+
+            "border-block-end",
+            "border-block-end-color",
+            "border-block-end-style",
+            "border-block-end-width",
+
+            "border-inline",
+            "border-inline-color",
+            "border-inline-style",
+            "border-inline-width",
+
+            "border-inline-start",
+            "border-inline-start-color",
+            "border-inline-start-style",
+            "border-inline-start-width",
+
+            "border-block-end",
+            "border-block-end-color",
+            "border-block-end-style",
+            "border-block-end-width",
+
+            "border-radius",
+            "border-top-left-radius",
+            "border-top-right-radius",
+            "border-bottom-right-radius",
+            "border-bottom-left-radius",
+
+            "border-start-start-radius",
+            "border-start-end-radius",
+            "border-end-start-radius",
+            "border-end-end-radius",
+
+            "box-shadow"
+        ]
+    ]
+}
