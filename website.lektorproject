@@ -1,5 +1,6 @@
 [project]
 name = SITE_NAME
+included_assets = .nojekyll
 
 [alternatives.en]
 name = English
