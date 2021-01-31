@@ -1,20 +1,20 @@
-$black: hsl(0, 0%, 0%);
-$white: hsl(0, 0%, 100%);
-$orange: hsl(40, 100%, 50%);
-$blue: hsl(240, 100%, 50%);
-
-$sans-serif: "Source Sans Pro";
-$serif: "Source Serif Pro";
-$monospace: "Source Code Pro";
-
 :root {
-  --color-bg: #{$white};
-  --color-text: #{$black};
-  --color-primary: #{$orange};
-  --color-link: #{$blue};
+  --color-black: hsl(0, 0%, 0%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-orange: hsl(40, 100%, 50%);
+  --color-blue: hsl(240, 100%, 50%);
+
+  --color-bg: var(--color-white);
+  --color-text: var(--color-black);
+  --color-primary: var(--color-orange);
+  --color-link: var(--color-blue);
+
+  --font-sans-serif: "Source Sans Pro";
+  --font-serif: "Source Serif Pro";
+  --font-monospace: "Source Code Pro";
 
   --font-family:
-      #{$sans-serif},
+      var(--font-sans-serif),
       system-ui,
       /* macOS 10.11-10.12 */ -apple-system,
       /* Windows 6+ */ "Segoe UI",
@@ -28,7 +28,7 @@ $monospace: "Source Code Pro";
       /* Windows emoji */ "Segoe UI Symbol",
       /* Linux emoji */ "Noto Color Emoji";
   --font-family-mono:
-      #{$monospace},
+      var(--font-monospace),
       /* macOS 10.10+ */ "Menlo",
       /* Windows 6+ */ "Consolas",
       /* Android 4+ */ "Roboto Mono",
@@ -54,7 +54,7 @@ $monospace: "Source Code Pro";
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #{$black};
-    --color-text: #{$white};
+    --color-bg: var(--color-black);
+    --color-text: var(--color-white);
   }
 }
