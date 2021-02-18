@@ -1,5 +1,8 @@
-{% extends "layout.html" %}
-{% block body %}
-  <h1>{{ this.title }}</h1>
-  {{ this.body }}
-{% endblock %}
+<html tal:define="layout load: layout.html" metal:use-macro="layout">
+  <main metal:fill-slot="content">
+    <h1 tal:content="this.title">Page title</h1>
+    <div tal:replace="this.body">
+      Page body
+    </div>
+  </main>
+</html>

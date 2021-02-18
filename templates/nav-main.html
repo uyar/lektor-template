@@ -1,16 +1,17 @@
 <nav aria-label="main navigation">
-  <a href="{{ '/'|url(this.alt) }}">
+  <a href="${ '/' >> url(alt=this.alt) }">
     <img
-      src="{{ '/static/logo.svg'|url }}"
-      alt="{{ bag('translate', this.alt, 'logo-alt') }}"
-      width="80" height="80"/>
+        src="${ '/static/logo.svg' >> url }"
+        alt="${ bag('translate', this.alt, 'logo-alt') }"
+        width="80" height="80"/>
   </a>
   <ul>
-    {% for slug in bag('menus', 'main-nav') %}
-      {% set page = site.get('/' + slug, alt=this.alt) %}
-      <li{% if this.is_child_of(page) %} class="active"{% endif%}>
-        <a href="{{ page|url }}">{{ page.title }}</a>
+    <div tal:repeat="slug bag('menus', 'main-nav')" tal:omit-tag="">
+      <li
+          tal:define="page site.get('/' + slug, alt=this.alt)"
+          tal:attributes="class 'active' if this.is_child_of(page) else None">
+        <a href="${ page >> url }" tal:content="page.title">Page title</a>
       </li>
-    {% endfor %}
+    </div>
   </ul>
 </nav>

@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="{{ this.alt }}">
+<html lang="${ this.alt }">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{{ site.env.project.name }}{% if this.title != site.env.project.name %} — {{ this.title }}{% endif %}</title>
-  <link rel="shortcut icon" href="{{ '/static/favicon.svg'|url }}" type="image/svg"/>
-  <link rel="stylesheet" href="{{ '/static/main.css'|url }}"/>
+  <title tal:define="site_title site.env.project.name">
+    ${ this.title }${(' — ' + site_title) if this.title != site_title else ''}
+  </title>
+  <link rel="shortcut icon" href="${ '/static/favicon.svg' >> url }" type="image/svg"/>
+  <link rel="stylesheet" href="${ '/static/main.css' >> url }"/>
 </head>
 <body>
   <header>
-    {% include 'nav-main.html' %}
-    {% include 'nav-alternatives.html' %}
+    <nav tal:define="nav_main load: nav-main.html" metal:use-macro="nav_main">
+      Main navigation
+    </nav>
+    <nav tal:define="nav_alts load: nav-alts.html" metal:use-macro="nav_alts">
+      Language navigation
+    </nav>
   </header>
-  <main>
-    {% block body %}{% endblock %}
+  <main metal:define-slot="content">
+    Page content
   </main>
   <footer>
     <small>

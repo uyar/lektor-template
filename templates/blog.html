@@ -1,10 +1,18 @@
-{% extends "layout.html" %}
-{% from "macros/blog.html" import render_blog_post %}
-{% from "macros/pagination.html" import render_pagination %}
-{% block body %}
-  {% for child in this.pagination.items %}
-    {{ render_blog_post(child, from_index=true) }}
-  {% endfor %}
+<html tal:define="layout load: layout.html" metal:use-macro="layout">
+  <main metal:fill-slot="content">
+    <div tal:repeat="post this.pagination.items" tal:omit-tag="">
+      <div
+          tal:define="render_blog_post load: macros/blog.html;
+                      from_index True;"
+          metal:use-macro="render_blog_post">
+        Blog post body
+      </div>
+    </div>
 
-  {{ render_pagination(this.pagination, this.alt) }}
-{% endblock %}
+    <div
+        tal:define="render_pagination load: macros/pagination.html"
+        metal:use-macro="render_pagination">
+      Previous and next links
+    </div>
+  </main>
+</html>
