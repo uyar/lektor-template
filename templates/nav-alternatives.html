@@ -2,7 +2,7 @@
   <ul>
     {% for alt in get_alts(this) %}
       <li{% if alt == this.alt %} class="active"{% endif %}>
-        <a href="{{ '.'|url(alt=alt) }}">{{ bag('translate', alt, "_name") }}</a>
+        <a href="{{ '.'|url(alt=alt) }}">{{ bag('translate', alt, '_name') }}</a>
       </li>
     {% endfor %}
   </ul>
