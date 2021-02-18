@@ -1,5 +1,12 @@
-{% extends "layout.html" %}
-{% from "macros/blog.html" import render_blog_post %}
-{% block body %}
-  {{ render_blog_post(this) }}
-{% endblock %}
+<html tal:define="layout load: layout.html" metal:use-macro="layout">
+  <main metal:fill-slot="content">
+    <h1 tal:content="this.title">Page title</h1>
+    <div
+        tal:define="render_blog_post load: macros/blog.html;
+                    post this;
+                    from_index False;"
+        metal:use-macro="render_blog_post">
+      Blog post body
+    </div>
+  </main>
+</html>
