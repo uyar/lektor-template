@@ -1,9 +1,9 @@
 <nav aria-label="main navigation">
   <a href="{{ '/'|url(alt=this.alt) }}">
     <img
-      src="{{ '/static/logo.svg'|url }}"
-      alt="{{ bag('translate', this.alt, 'logo-alt') }}"
-      width="80" height="80"/>
+        src="{{ '/static/logo.svg'|url }}"
+        alt="{{ bag('translate', this.alt, 'logo-alt') }}"
+        width="80" height="80"/>
   </a>
   <ul>
     {% for slug in bag('menus', 'main-nav') %}

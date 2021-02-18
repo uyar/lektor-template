@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ this.alt }}">
 <head>
-  {% set site_title = site.env.project.name %}
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>{{ this.title }}{% if this.title != site_title %} — {{ site_title }}{% endif %}</title>
+  <title>
+    {% set site_title = site.env.project.name %}
+    {{ this.title }}{% if this.title != site_title %} — {{ site_title }}{% endif %}
+  </title>
   <link rel="shortcut icon" href="{{ '/static/favicon.svg'|url }}" type="image/svg"/>
   <link rel="stylesheet" href="{{ '/static/main.css'|url }}"/>
 </head>
