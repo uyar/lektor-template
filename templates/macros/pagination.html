@@ -1,21 +1,9 @@
-<div class="pagination"
-    tal:define="txt_prev bag('translate', alt, 'pagination-prev');
-                txt_next bag('translate', alt, 'pagination-next');">
-  <span tal:switch="this.pagination.has_prev" tal:omit-tag="">
-    <span tal:case="True" tal:omit-tag="">
-      <a href="${ pagination.prev >> url }">&laquo; ${ txt_prev }</a>
-    </span>
-    <span tal:case="False" tal:omit-tag="">
-      <span class="disabled">&laquo; ${ txt_prev }</span>
-    </span>
-  </span>
-  | ${ this.pagination.page } |
-  <span tal:switch="this.pagination.has_next" tal:omit-tag="">
-    <span tal:case="True" tal:omit-tag="">
-      <a href="${ pagination.next >> url }">${ txt_next } &raquo;</a>
-    </span>
-    <span tal:case="False" tal:omit-tag="">
-      <span class="disabled">${ txt_next } &raquo;</span>
-    </span>
-  </span>
+<div class="pagination">
+  <a tal:condition="this.pagination.has_prev" href="${ pagination.prev >> url }">
+    &laquo; ${ bag('translate', alt, 'pagination-prev') }
+  </a>
+  ${ this.pagination.page }
+  <a tal:condition="this.pagination.has_next" href="${ pagination.next >> url }">
+    ${ bag('translate', alt, 'pagination-next') } &raquo;
+  </a>
 </div>

@@ -3,19 +3,35 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title tal:define="site_title site.env.project.name">
-    ${ this.title }${(' — ' + site_title) if this.title != site_title else ''}
-  </title>
+  <title tal:content="this.title + ' — ' + site.env.project.name">Page title</title>
   <link rel="shortcut icon" href="${ '/static/favicon.svg' >> url }" type="image/svg"/>
   <link rel="stylesheet" href="${ '/static/main.css' >> url }"/>
 </head>
 <body>
   <header>
-    <nav tal:define="nav_main load: nav-main.html" metal:use-macro="nav_main">
-      Main navigation
+    <nav aria-label="main navigation">
+      <a href="${ '/' >> url(alt=this.alt) }">
+        <img src="${ '/static/logo.svg' >> url }"
+             alt="${ bag('translate', this.alt, 'logo-alt') }"
+             width="80" height="80"/>
+      </a>
+      <ul>
+        <li tal:repeat="menu_item [site.get('/' + slug, alt=this.alt)
+                                   for slug in bag('menus', 'main-nav')]"
+            tal:attributes="class 'active' if this.is_child_of(menu_item) else None">
+          <a href="${ menu_item >> url }" tal:content="menu_item.title">Item title</a>
+        </li>
+      </ul>
     </nav>
-    <nav tal:define="nav_alts load: nav-alts.html" metal:use-macro="nav_alts">
-      Language navigation
+
+    <nav class="alternatives">
+      <ul>
+        <li tal:repeat="alt get_alts(this)"
+            tal:attributes="class 'active' if alt == this.alt else None">
+          <a href="${ '.' >> url(alt=alt) }"
+             tal:content="bag('translate', alt, '_name')">Language</a>
+        </li>
+      </ul>
     </nav>
   </header>
   <main metal:define-slot="content">

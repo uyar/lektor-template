@@ -1,12 +1,12 @@
 <html tal:define="layout load: layout.html" metal:use-macro="layout">
   <main metal:fill-slot="content">
-    <h1 tal:content="this.title">Page title</h1>
-    <div
-        tal:define="render_blog_post load: macros/blog.html;
-                    post this;
-                    from_index False;"
-        metal:use-macro="render_blog_post">
-      Blog post body
+    <h1 tal:content="this.title">Post title</h1>
+    <small class="meta">
+      <span tal:replace="this.author">Author</span>,
+      <span tal:replace="this.pub_date">Publication date</span>
+    </small>
+    <div tal:replace="this.body">
+      Post body
     </div>
   </main>
 </html>

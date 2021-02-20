@@ -1,17 +1,18 @@
 <html tal:define="layout load: layout.html" metal:use-macro="layout">
   <main metal:fill-slot="content">
-    <div tal:repeat="post this.pagination.items" tal:omit-tag="">
-      <div
-          tal:define="render_blog_post load: macros/blog.html;
-                      from_index True;"
-          metal:use-macro="render_blog_post">
-        Blog post body
+    <div class="blog-post" tal:repeat="post this.pagination.items">
+      <h2><a href="${ post >> url }" tal:content="post.title">Post title</a></h2>
+      <small class="meta">
+        <span tal:replace="post.author">Author</span>,
+        <span tal:replace="post.pub_date">Publication date</span>
+      </small>
+      <div tal:replace="post.body">
+        Post body
       </div>
     </div>
 
-    <div
-        tal:define="render_pagination load: macros/pagination.html"
-        metal:use-macro="render_pagination">
+    <div tal:define="render_pagination load: macros/pagination.html"
+         metal:use-macro="render_pagination">
       Previous and next links
     </div>
   </main>
