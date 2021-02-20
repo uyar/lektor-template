@@ -1,5 +1,9 @@
 {% extends "layout.html" %}
-{% from "macros/blog.html" import render_blog_post %}
 {% block body %}
-  {{ render_blog_post(this) }}
+  <h1>{{ this.title }}</h1>
+  <small class="meta">
+    {{ this.author }},
+    {{ this.pub_date }}
+  </small>
+  {{ this.body }}
 {% endblock %}

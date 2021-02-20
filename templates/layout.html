@@ -3,17 +3,37 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>
-    {% set site_title = site.env.project.name %}
-    {{ this.title }}{% if this.title != site_title %} — {{ site_title }}{% endif %}
-  </title>
-  <link rel="shortcut icon" href="{{ '/static/favicon.svg'|url }}" type="image/svg"/>
-  <link rel="stylesheet" href="{{ '/static/main.css'|url }}"/>
+  <title>{{ this.title }} — {{ site.env.project.name }}</title>
+  <link rel="shortcut icon" href="{{ '/static/favicon.svg' | url }}" type="image/svg"/>
+  <link rel="stylesheet" href="{{ '/static/main.css' | url }}"/>
 </head>
 <body>
   <header>
-    {% include 'nav-main.html' %}
-    {% include 'nav-alts.html' %}
+    <nav aria-label="main navigation">
+      <a href="{{ '/' | url(alt=this.alt) }}">
+        <img src="{{ '/static/logo.svg' | url }}"
+             alt="{{ bag('translate', this.alt, 'logo-alt') }}"
+             width="80" height="80"/>
+      </a>
+      <ul>
+        {% for slug in bag('menus', 'main-nav') %}
+        {% set menu_item = site.get('/' + slug, alt=this.alt) %}
+        <li{% if this.is_child_of(menu_item) %} class="active"{% endif %}>
+          <a href="{{ menu_item | url }}">{{ menu_item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <nav class="alternatives">
+      <ul>
+        {% for alt in get_alts(this) %}
+        <li{% if alt == this.alt %} class="active"{% endif %}>
+          <a href="{{ '.' | url(alt=alt) }}">{{ bag('translate', alt, '_name') }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
   </header>
   <main>
     {% block body %}{% endblock %}

@@ -1,17 +1,15 @@
 {% macro render_pagination(pagination, alt) %}
   <div class="pagination">
-    {% set txt_prev = bag('translate', alt, 'pagination-prev') %}
-    {% set txt_next = bag('translate', alt, 'pagination-next') %}
     {% if pagination.has_prev %}
-      <a href="{{ pagination.prev|url }}">&laquo; {{ txt_prev }}</a>
-    {% else %}
-      <span class="disabled">&laquo; {{ txt_prev }}</span>
+    <a href="{{ pagination.prev | url }}">
+      &laquo; {{ bag('translate', alt, 'pagination-prev') }}
+    </a>
     {% endif %}
-    | {{ pagination.page }} |
+    {{ pagination.page }}
     {% if pagination.has_next %}
-      <a href="{{ pagination.next|url }}">{{ txt_next }} &raquo;</a>
-    {% else %}
-      <span class="disabled">{{ txt_next }} &raquo;</span>
+    <a href="{{ pagination.next | url }}">
+      {{ bag('translate', alt, 'pagination-next') }} &raquo;
+    </a>
     {% endif %}
   </div>
 {% endmacro %}
