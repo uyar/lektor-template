@@ -1,17 +1,12 @@
 :root {
-  --color-black: hsl(0, 0%, 0%);
-  --color-white: hsl(0, 0%, 100%);
-  --color-orange: hsl(40, 100%, 50%);
-  --color-blue: hsl(240, 100%, 50%);
+  --color-bg: hsl(0, 0%, 100%);         /* white */
+  --color-text: hsl(0, 0%, 0%);         /* black */
+  --color-primary: hsl(40, 100%, 50%);  /* orange */
+  --color-link: hsl(240, 100%, 50%);    /* blue */
 
-  --color-bg: var(--color-white);
-  --color-text: var(--color-black);
-  --color-primary: var(--color-orange);
-  --color-link: var(--color-blue);
-
-  --font-sans-serif: "Source Sans Pro";
-  --font-serif: "Source Serif Pro";
-  --font-monospace: "Source Code Pro";
+  --font-sans-serif: "IBM Plex Sans";
+  --font-serif: "IBM Plex Serif";
+  --font-monospace: "IBM Plex Mono";
 
   --font-family:
       var(--font-sans-serif),
@@ -49,12 +44,16 @@
   --space-xl: calc(16 * var(--space-xs));
 
   --width-content: 60em;
-  --width-full: calc(1.5 * var(--width-content));
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: var(--color-black);
-    --color-text: var(--color-white);
+    --color-bg: hsl(0, 0%, 7%);         /* off-black */
+    --color-text: hsl(0, 0%, 93%);      /* off-white */
+    --color-link: hsl(240, 100%, 75%);  /* light-blue */
+  }
+
+  img {
+    filter: brightness(0.8) contrast(1.2);
   }
 }

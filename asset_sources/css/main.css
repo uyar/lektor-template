@@ -1,10 +1,10 @@
 @charset "utf-8";
 
-@import "variables";
-@import "sanitize";
-@import "assets";
-@import "forms";
-@import "reduce-motion";
-@import "base";
-@import "nav";
-@import "custom";
+@import "variables.css";
+@import "sanitize.css";
+@import "assets.css";
+@import "forms.css";
+@import "reduce-motion.css";
+@import "base.css";
+@import "nav.css";
+@import "custom.css";
