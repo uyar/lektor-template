@@ -12,7 +12,7 @@ pre {
   font-family: var(--font-family-mono);
 }
 
-/* Layout
+/* Colors
  * ========================================================================== */
 
 body {
@@ -20,34 +20,30 @@ body {
   color: var(--color-text);
 }
 
+a {
+  color: var(--color-link);
+}
+
+/* Layout
+ * ========================================================================== */
+
 header,
+main,
 footer {
-  padding:
-      var(--space-m)
-      max(var(--space-m), calc(50% - 0.5 * var(--width-full)));
+  padding: var(--space-m) var(--space-m);
 }
 
 main {
   max-width: var(--width-content);
   margin: 0 auto;
-  padding: var(--space-m) var(--space-m);
 }
 
-/* Text-level semantics
- * ========================================================================== */
-
-a {
-  color: var(--color-link);
-  text-decoration: none;
+th {
+  text-align: left;
 }
 
 /* Assets
  * ========================================================================== */
-
-figure {
-  margin: 0;
-  padding: 0;
-}
 
 main img {
   content-visibility: auto;

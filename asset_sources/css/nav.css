@@ -29,12 +29,16 @@ nav ul li ul li {
   padding: var(--space-s) var(--space-m);
 }
 
+nav a {
+  text-decoration: none;
+}
+
 /* Media queries
  * ========================================================================== */
 
 @media (min-width: 60em) {
   nav img {
-    margin-inline-end: var(--space-m);
+    margin-right: var(--space-m);
   }
 
   nav ul {
@@ -43,6 +47,6 @@ nav ul li ul li {
   }
 
   nav ul li + li {
-    margin-inline-start: var(--space-s);
+    margin-left: var(--space-s);
   }
 }
