@@ -1,0 +1,10 @@
+<svg role="img" viewBox="0 0 24 24" width="64" height="64"
+     fill="none" stroke="black" stroke-width="1px"
+     aria-label="Logo">
+  <title>Logo</title>
+  <description>{{ bag('translate', this.alt, 'logo-alt') }}</description>
+  <path d="M 1 12 a 11,11 0 1,0 22,0 a 11,11 0 1,0 -22,0
+           M 6 10 v -3 h 12 v 3
+           M 12 7 v 12
+           M 10 19 h 4"/>
+</svg>
