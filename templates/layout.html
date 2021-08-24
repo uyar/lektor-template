@@ -11,9 +11,8 @@
   <header>
     <nav aria-label="main navigation">
       <a href="${ '/' >> url(alt=this.alt) }">
-        <img src="${ '/static/logo.svg' >> url }"
-             alt="${ bag('translate', this.alt, 'logo-alt') }"
-             width="80" height="80"/>
+        <svg tal:define="logo load: logo.svg" metal:use-macro="logo">
+        </svg>
       </a>
       <ul>
         <li tal:repeat="menu_item [site.get('/' + slug, alt=this.alt)
