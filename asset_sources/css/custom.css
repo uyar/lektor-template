@@ -1,9 +1,19 @@
+header,
+footer {
+  padding: var(--space-m);
+}
+
 header {
   background-color: var(--color-primary);
 }
 
 footer {
   text-align: center;
+}
+
+main {
+  width: min(80ch, 100vw - var(--space-l));
+  margin: 0 auto;
 }
 
 nav.alternatives {

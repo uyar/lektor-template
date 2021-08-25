@@ -13,7 +13,7 @@
       <a href="{{ '/' | url(alt=this.alt) }}">
         {% include 'logo.svg' %}
       </a>
-      <ul>
+      <ul role="list">
         {% for slug in bag('menus', 'main-nav') %}
         {% set menu_item = site.get('/' + slug, alt=this.alt) %}
         <li{% if this.is_child_of(menu_item) %} class="active"{% endif %}>
@@ -24,7 +24,7 @@
     </nav>
 
     <nav class="alternatives">
-      <ul>
+      <ul role="list">
         {% for alt in get_alts(this) %}
         <li{% if alt == this.alt %} class="active"{% endif %}>
           <a href="{{ '.' | url(alt=alt) }}">{{ bag('translate', alt, '_name') }}</a>

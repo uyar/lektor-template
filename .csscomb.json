@@ -373,9 +373,11 @@
             "page-break-before",
             "page-break-inside",
 
+            "animation-delay",
             "animation-duration",
             "animation-iteration-count",
             "transition",
+            "transition-delay",
             "transition-duration"
         ]
     ]
