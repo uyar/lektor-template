@@ -14,7 +14,7 @@
         <svg tal:define="logo load: logo.svg" metal:use-macro="logo">
         </svg>
       </a>
-      <ul>
+      <ul role="list">
         <li tal:repeat="menu_item [site.get('/' + slug, alt=this.alt)
                                    for slug in bag('menus', 'main-nav')]"
             tal:attributes="class 'active' if this.is_child_of(menu_item) else None">
@@ -24,7 +24,7 @@
     </nav>
 
     <nav class="alternatives">
-      <ul>
+      <ul role="list">
         <li tal:repeat="alt get_alts(this)"
             tal:attributes="class 'active' if alt == this.alt else None">
           <a href="${ '.' >> url(alt=alt) }"

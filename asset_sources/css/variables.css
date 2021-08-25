@@ -4,46 +4,14 @@
   --color-primary: hsl(40, 100%, 50%);  /* orange */
   --color-link: hsl(240, 100%, 50%);    /* blue */
 
-  --font-sans-serif: "IBM Plex Sans";
-  --font-serif: "IBM Plex Serif";
-  --font-monospace: "IBM Plex Mono";
-
-  --font-family:
-      var(--font-sans-serif),
-      system-ui,
-      /* macOS 10.11-10.12 */ -apple-system,
-      /* Windows 6+ */ "Segoe UI",
-      /* Android 4+ */ "Roboto",
-      /* Ubuntu 10.10+ */ "Ubuntu",
-      /* Gnome 3+ */ "Cantarell",
-      /* KDE Plasma 5+ */ "Noto Sans",
-      /* fallback */ sans-serif,
-      /* macOS emoji */ "Apple Color Emoji",
-      /* Windows emoji */ "Segoe UI Emoji",
-      /* Windows emoji */ "Segoe UI Symbol",
-      /* Linux emoji */ "Noto Color Emoji";
-  --font-family-mono:
-      var(--font-monospace),
-      /* macOS 10.10+ */ "Menlo",
-      /* Windows 6+ */ "Consolas",
-      /* Android 4+ */ "Roboto Mono",
-      /* Ubuntu 10.10+ */ "Ubuntu Monospace",
-      /* KDE Plasma 5+ */ "Noto Mono",
-      /* KDE Plasma 4+ */ "Oxygen Mono",
-      /* Linux/OpenOffice fallback */ "Liberation Mono",
-      /* fallback */ monospace,
-      /* macOS emoji */ "Apple Color Emoji",
-      /* Windows emoji */ "Segoe UI Emoji",
-      /* Windows emoji */ "Segoe UI Symbol",
-      /* Linux emoji */ "Noto Color Emoji";
+  --font-family: system-ui, sans-serif;
+  --font-family-mono: monospace;
 
   --space-xs: 0.25rem;
   --space-s: calc(2 * var(--space-xs));
   --space-m: calc(4 * var(--space-xs));
   --space-l: calc(8 * var(--space-xs));
   --space-xl: calc(16 * var(--space-xs));
-
-  --width-content: 60em;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,9 +19,5 @@
     --color-bg: hsl(0, 0%, 7%);         /* off-black */
     --color-text: hsl(0, 0%, 93%);      /* off-white */
     --color-link: hsl(240, 100%, 75%);  /* light-blue */
-  }
-
-  img {
-    filter: brightness(0.8) contrast(1.2);
   }
 }
