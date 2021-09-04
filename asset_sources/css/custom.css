@@ -1,3 +1,8 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 header,
 footer {
   padding: var(--space-m);
@@ -12,7 +17,8 @@ footer {
 }
 
 main {
-  width: min(80ch, 100vw - var(--space-l));
+  flex-grow: 1;
+  width: min(80ch, 100vw - 2 * var(--space-m));
   margin: 0 auto;
 }
 

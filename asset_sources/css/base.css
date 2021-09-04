@@ -12,8 +12,15 @@ body {
   line-height: 1.5;
 }
 
-img {
-  display: block;
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  padding: 0;
+  list-style-type: none;
 }
 
 table {
@@ -22,12 +29,6 @@ table {
 
 th {
   text-align: left;
-}
-
-ul[role='list'],
-ol[role='list'] {
-  padding: 0;
-  list-style: none;
 }
 
 html:focus-within {
@@ -68,6 +69,10 @@ video {
 
 main img {
   content-visibility: auto;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
 }
 
 @media (prefers-color-scheme: dark) {
