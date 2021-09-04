@@ -71,10 +71,6 @@ main img {
   content-visibility: auto;
 }
 
-svg:not([fill]) {
-  fill: currentColor;
-}
-
 @media (prefers-color-scheme: dark) {
   img {
     filter: brightness(0.8) contrast(1.2);
