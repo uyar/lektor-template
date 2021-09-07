@@ -2,12 +2,12 @@ const gulp = require('gulp');
 
 gulp.task('css', () => {
     const postcss = require('gulp-postcss');
-    const csscomb = require('gulp-csscomb');
+    const stylelint = require('gulp-stylelint');
 
     return gulp.src('asset_sources/css/main.css')
-      .pipe(postcss())
-      .pipe(csscomb())
-      .pipe(gulp.dest('assets/static/'));
+        .pipe(postcss())
+        .pipe(stylelint({ 'fix': true }))
+        .pipe(gulp.dest('assets/static/'));
 });
 
 gulp.task('build', gulp.series('css'));
