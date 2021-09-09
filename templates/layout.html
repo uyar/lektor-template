@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ this.alt }}">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ this.title }} — {{ site.env.project.name }}</title>
-  <link rel="shortcut icon" href="{{ '/static/favicon.svg' | url }}" type="image/svg"/>
-  <link rel="stylesheet" href="{{ '/static/main.css' | url }}"/>
+  <link rel="shortcut icon" href="{{ '/static/favicon.svg' | url }}" type="image/svg" />
+  <link rel="stylesheet" href="{{ '/static/main.css' | url }}" />
 </head>
+
 <body>
   <header>
     <nav aria-label="main navigation">
@@ -16,30 +18,33 @@
       <ul role="list">
         {% for slug in bag('menus', 'main-nav') %}
         {% set menu_item = site.get('/' + slug, alt=this.alt) %}
-        <li{% if this.is_child_of(menu_item) %} class="active"{% endif %}>
+        <li{% if this.is_child_of(menu_item) %} class="active" {% endif %}>
           <a href="{{ menu_item | url }}">{{ menu_item.title }}</a>
-        </li>
-        {% endfor %}
+          </li>
+          {% endfor %}
       </ul>
     </nav>
 
     <nav class="alternatives">
       <ul role="list">
         {% for alt in get_alts(this) %}
-        <li{% if alt == this.alt %} class="active"{% endif %}>
+        <li{% if alt==this.alt %} class="active" {% endif %}>
           <a href="{{ '.' | url(alt=alt) }}">{{ bag('translate', alt, '_name') }}</a>
-        </li>
-        {% endfor %}
+          </li>
+          {% endfor %}
       </ul>
     </nav>
   </header>
+
   <main>
     {% block body %}{% endblock %}
   </main>
+
   <footer>
     <small>
       &copy; AUTHOR, YEAR
     </small>
   </footer>
 </body>
+
 </html>

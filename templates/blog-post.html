@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
 {% block body %}
-  <h1>{{ this.title }}</h1>
-  <small class="meta">
-    {{ this.author }},
-    {{ this.pub_date }}
-  </small>
-  {{ this.body }}
+<h1>{{ this.title }}</h1>
+<small class="meta">
+  {{ this.author }},
+  {{ this.pub_date }}
+</small>
+{{ this.body }}
 {% endblock %}

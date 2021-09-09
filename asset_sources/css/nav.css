@@ -33,10 +33,7 @@ nav a {
   text-decoration: none;
 }
 
-/* Media queries
- * ========================================================================== */
-
-@media (min-width: 60em) {
+@media (min-width: 769px) {
   nav img {
     margin-right: var(--space-m);
   }

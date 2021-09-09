@@ -1,16 +1,16 @@
 {% extends "layout.html" %}
 {% from "macros/pagination.html" import render_pagination %}
 {% block body %}
-  {% for post in this.pagination.items %}
-  <div class="blog-post">
-    <h2><a href="{{ post | url }}">{{ post.title }}</a></h2>
-    <small class="meta">
-      {{ post.author }},
-      {{ post.pub_date }}
-    </small>
-    {{ post.body }}
-  </div>
-  {% endfor %}
+{% for post in this.pagination.items %}
+<div class="blog-post">
+  <h2><a href="{{ post | url }}">{{ post.title }}</a></h2>
+  <small class="meta">
+    {{ post.author }},
+    {{ post.pub_date }}
+  </small>
+  {{ post.body }}
+</div>
+{% endfor %}
 
-  {{ render_pagination(this.pagination, this.alt) }}
+{{ render_pagination(this.pagination, this.alt) }}
 {% endblock %}

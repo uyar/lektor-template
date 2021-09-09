@@ -38,8 +38,8 @@ html:focus-within {
 /* colors */
 
 body {
-  background-color: var(--color-bg);
   color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 a {
@@ -88,11 +88,11 @@ main img {
   ::before,
   ::after {
     background-attachment: initial !important;
-    scroll-behavior: auto !important;
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
     transition-delay: 0s !important;
     transition-duration: 0s !important;
+    animation-duration: 1ms !important;
+    animation-delay: -1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }
