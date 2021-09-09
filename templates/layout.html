@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="${ this.alt }">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title tal:content="this.title + ' — ' + site.env.project.name">Page title</title>
-  <link rel="shortcut icon" href="${ '/static/favicon.svg' >> url }" type="image/svg"/>
-  <link rel="stylesheet" href="${ '/static/main.css' >> url }"/>
+  <link rel="shortcut icon" href="${ '/static/favicon.svg' >> url }" type="image/svg" />
+  <link rel="stylesheet" href="${ '/static/main.css' >> url }" />
 </head>
+
 <body>
   <header>
     <nav aria-label="main navigation">
@@ -17,7 +19,7 @@
       <ul role="list">
         <li tal:repeat="menu_item [site.get('/' + slug, alt=this.alt)
                                    for slug in bag('menus', 'main-nav')]"
-            tal:attributes="class 'active' if this.is_child_of(menu_item) else None">
+          tal:attributes="class 'active' if this.is_child_of(menu_item) else None">
           <a href="${ menu_item >> url }" tal:content="menu_item.title">Item title</a>
         </li>
       </ul>
@@ -25,21 +27,22 @@
 
     <nav class="alternatives">
       <ul role="list">
-        <li tal:repeat="alt get_alts(this)"
-            tal:attributes="class 'active' if alt == this.alt else None">
-          <a href="${ '.' >> url(alt=alt) }"
-             tal:content="bag('translate', alt, '_name')">Language</a>
+        <li tal:repeat="alt get_alts(this)" tal:attributes="class 'active' if alt == this.alt else None">
+          <a href="${ '.' >> url(alt=alt) }" tal:content="bag('translate', alt, '_name')">Language</a>
         </li>
       </ul>
     </nav>
   </header>
+
   <main metal:define-slot="content">
     Page content
   </main>
+
   <footer>
     <small>
       &copy; AUTHOR, YEAR
     </small>
   </footer>
 </body>
+
 </html>
