@@ -7,9 +7,15 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   margin: 0;
   line-height: 1.5;
+}
+
+main {
+  flex-grow: 1;
 }
 
 h1 {
@@ -65,6 +71,7 @@ img,
 video {
   max-width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 
 main img {
