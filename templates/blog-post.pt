@@ -1,0 +1,14 @@
+<html tal:define="layout load: layout.pt" metal:use-macro="layout">
+
+<main metal:fill-slot="content">
+  <h1 tal:content="this.title">Post title</h1>
+  <small class="meta">
+    <span tal:replace="this.author">Author</span>,
+    <span tal:replace="this.pub_date">Publication date</span>
+  </small>
+  <div tal:replace="this.body">
+    Post body
+  </div>
+</main>
+
+</html>

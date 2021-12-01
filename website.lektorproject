@@ -14,3 +14,4 @@ url_prefix = /tr/
 
 [packages]
 lektor-gulp = 0.3.2
+lektor-chameleon = 0.6.1

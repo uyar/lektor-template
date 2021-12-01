@@ -1,0 +1,20 @@
+<html tal:define="layout load: layout.pt" metal:use-macro="layout">
+
+<main metal:fill-slot="content">
+  <div class="blog-post" tal:repeat="post this.pagination.items">
+    <h2><a href="${ post >> url }" tal:content="post.title">Post title</a></h2>
+    <small class="meta">
+      <span tal:replace="post.author">Author</span>,
+      <span tal:replace="post.pub_date">Publication date</span>
+    </small>
+    <div tal:replace="post.body">
+      Post body
+    </div>
+  </div>
+
+  <div tal:define="render_pagination load: macros/pagination.pt" metal:use-macro="render_pagination">
+    Previous and next links
+  </div>
+</main>
+
+</html>
