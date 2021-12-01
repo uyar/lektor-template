@@ -1,4 +1,4 @@
-<html tal:define="layout load: layout.html" metal:use-macro="layout">
+<html tal:define="layout load: layout.pt" metal:use-macro="layout">
 
 <main metal:fill-slot="content">
   <div class="blog-post" tal:repeat="post this.pagination.items">
@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div tal:define="render_pagination load: macros/pagination.html" metal:use-macro="render_pagination">
+  <div tal:define="render_pagination load: macros/pagination.pt" metal:use-macro="render_pagination">
     Previous and next links
   </div>
 </main>

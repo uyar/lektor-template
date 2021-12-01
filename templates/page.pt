@@ -1,4 +1,4 @@
-<html tal:define="layout load: layout.html" metal:use-macro="layout">
+<html tal:define="layout load: layout.pt" metal:use-macro="layout">
 
 <main metal:fill-slot="content">
   <h1 tal:content="this.title">Page title</h1>
