@@ -3,7 +3,13 @@
     "stylelint-config-rational-order"
   ],
   "rules": {
+    "indentation": 2,
+    "rule-empty-line-before": "always",
     "block-opening-brace-space-before": "always",
-    "declaration-colon-space-after": "always"
+    "block-opening-brace-newline-after": "always",
+    "block-closing-brace-newline-before": "always",
+    "declaration-colon-space-after": "always",
+    "declaration-block-semicolon-newline-after": "always",
+    "declaration-block-trailing-semicolon": "always"
   }
 }
