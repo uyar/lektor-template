@@ -2,11 +2,9 @@ const gulp = require('gulp');
 
 gulp.task('css', () => {
     const postcss = require('gulp-postcss');
-    const stylelint = require('gulp-stylelint');
 
     return gulp.src('asset_sources/css/main.css')
         .pipe(postcss())
-        .pipe(stylelint({ 'fix': true }))
         .pipe(gulp.dest('assets/static/'));
 });
 

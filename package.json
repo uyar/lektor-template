@@ -11,13 +11,12 @@
   "homepage": "https://github.com/uyar/lektor-template",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-postcss": "^9.0.0",
-    "gulp-stylelint": "^13.0.0",
-    "postcss": "^8.3.6",
+    "gulp-postcss": "^9.0.1",
+    "postcss": "^8.4.4",
     "postcss-discard-comments": "^5.0.1",
     "postcss-import": "^14.0.2",
-    "stylelint": "^13.13.1",
+    "stylelint": "^14.1.0",
     "stylelint-config-rational-order": "^0.1.2",
-    "stylelint-order": "^4.1.0"
+    "stylelint-order": "^5.0.0"
   }
 }
