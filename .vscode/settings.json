@@ -1,4 +1,5 @@
 {
+    "browser-preview.startUrl": "http://localhost:5000/",
     "files.associations": {
         "*.pt": "html"
     }
