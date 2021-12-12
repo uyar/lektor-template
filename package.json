@@ -10,6 +10,7 @@
   "license": "MIT",
   "homepage": "https://github.com/uyar/lektor-template",
   "devDependencies": {
+    "@ronilaukkarinen/gulp-stylelint": "^14.0.5",
     "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.1",
     "postcss": "^8.4.4",
