@@ -1,9 +1,9 @@
 _slug: merhaba
 ---
-author: AUTHOR
+title: Merhaba
 ---
-body: Bu bir blog yazısı örneğidir.
+author: AUTHOR
 ---
 pub_date: 2021-01-09
 ---
-title: Merhaba
+body: Bu bir blog yazısı örneğidir.
