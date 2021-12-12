@@ -6,4 +6,6 @@ author: AUTHOR
 ---
 pub_date: 2021-01-09
 ---
-body: Bu bir blog yazısı örneğidir.
+body:
+
+Bu bir blog yazısı örneğidir.
