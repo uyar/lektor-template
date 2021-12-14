@@ -13,11 +13,10 @@ footer {
 
 main {
   width: min(80ch, 100vw - 2 * var(--space-m));
-  margin: 0 auto;
 }
 
 nav.alternatives {
-  font-size: 0.8em;
+  font-size: 0.8rem;
   text-align: right;
   text-transform: lowercase;
 }

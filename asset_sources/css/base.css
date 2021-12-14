@@ -7,26 +7,20 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   margin: 0;
   line-height: 1.5;
-}
-
-main {
-  flex-grow: 1;
-}
-
-h1 {
-  margin: 0.67em 0;
-  font-size: 2em;
 }
 
 ul[role='list'],
 ol[role='list'] {
   padding: 0;
   list-style-type: none;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
 }
 
 table {
@@ -39,6 +33,20 @@ th {
 
 html:focus-within {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    background-attachment: initial !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+    animation-duration: 1ms !important;
+    animation-delay: -1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* colors */
@@ -65,14 +73,20 @@ pre {
   font-family: var(--font-family-mono);
 }
 
-/* images, videos */
+/* layout */
 
-img,
-video {
-  max-width: 100%;
-  height: auto;
-  vertical-align: middle;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+main {
+  flex-grow: 1;
+  margin: 0 auto;
+}
+
+/* images, videos */
 
 main img {
   content-visibility: auto;
@@ -81,25 +95,5 @@ main img {
 @media (prefers-color-scheme: dark) {
   img {
     filter: brightness(0.8) contrast(1.2);
-  }
-}
-
-/* reduce motion */
-
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-  ::before,
-  ::after {
-    background-attachment: initial !important;
-    transition-delay: 0s !important;
-    transition-duration: 0s !important;
-    animation-duration: 1ms !important;
-    animation-delay: -1ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
   }
 }
