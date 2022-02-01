@@ -1,0 +1,17 @@
+[Unit]
+Description=Lektor Admin
+After=syslog.target
+After=network.target
+
+[Service]
+RestartSec=2s
+Type=simple
+User=lektor
+Group=lektor
+WorkingDirectory=/home/lektor
+ExecStart=lektor serve -p 5000 -f gulp
+Restart=always
+Environment=USER=lektor HOME=/home/lektor
+
+[Install]
+WantedBy=multi-user.target
