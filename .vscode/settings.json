@@ -1,7 +1,0 @@
-{
-    "browse-lite.startUrl": "http://localhost:5000/",
-    "browse-lite.chromeExecutable": "chromium",
-    "files.associations": {
-        "*.pt": "html"
-    }
-}
