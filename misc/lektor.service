@@ -9,7 +9,7 @@ Type=simple
 User=lektor
 Group=lektor
 WorkingDirectory=/home/lektor
-ExecStart=lektor serve -p 5000 -f gulp
+ExecStart=lektor serve -p 5000
 Restart=always
 Environment=USER=lektor HOME=/home/lektor
 

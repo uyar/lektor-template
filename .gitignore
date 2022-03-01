@@ -1,7 +1,3 @@
 .venv
 .vscode
-__pycache__
-*.egg-info
 temp
-node_modules
-assets/static/main.css
