@@ -1,13 +1,13 @@
 {
   "en": {
     "_name": "English",
-    "logo-alt": "LOGO",
+    "home": "Home",
     "pagination-next": "Next",
     "pagination-prev": "Previous"
   },
   "tr": {
     "_name": "Türkçe",
-    "logo-alt": "LOGO",
+    "home": "Ana sayfa",
     "pagination-next": "Sonraki",
     "pagination-prev": "Önceki"
   }

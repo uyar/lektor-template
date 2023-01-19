@@ -10,10 +10,10 @@
 <body>
   <header>
     <nav aria-label="main navigation">
-      <a href="{{ '/' | url(alt=this.alt) }}">
-        {% include 'logo.svg' %}
-      </a>
       <ul role="list">
+        <li>
+          <a href="{{ '/' | url(alt=this.alt) }}">{{ bag('translate', alt, 'home') }}</a>
+        </li>
         {% for slug in bag('menus', 'main-nav') %}
         {%   set menu_item = site.get('/' + slug, alt=this.alt) %}
         <li{% if this.is_child_of(menu_item) %} class="active" {% endif %}>
