@@ -21,8 +21,8 @@ th {
   text-align: left;
 }
 
-ul[role='list'],
-ol[role='list'] {
+nav ul,
+nav ol {
   list-style-type: none;
 }
 

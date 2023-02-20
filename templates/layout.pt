@@ -10,7 +10,7 @@
 <body>
   <header>
     <nav aria-label="main navigation">
-      <ul role="list">
+      <ul>
         <li>
           <a href="${ '/' >> url(alt=this.alt) }"
               tal:content="bag('translate', alt, 'home')">Home</a>
@@ -24,7 +24,7 @@
     </nav>
 
     <nav class="alternatives">
-      <ul role="list">
+      <ul>
         <li tal:repeat="alt get_alts(this)" tal:attributes="class 'active' if alt == this.alt else None">
           <a href="${ '.' >> url(alt=alt) }" tal:content="bag('translate', alt, '_name')">Language</a>
         </li>

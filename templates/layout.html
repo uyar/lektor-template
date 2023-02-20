@@ -10,7 +10,7 @@
 <body>
   <header>
     <nav aria-label="main navigation">
-      <ul role="list">
+      <ul>
         <li>
           <a href="{{ '/' | url(alt=this.alt) }}">{{ bag('translate', alt, 'home') }}</a>
         </li>
@@ -24,7 +24,7 @@
     </nav>
 
     <nav class="alternatives">
-      <ul role="list">
+      <ul>
         {% for alt in get_alts(this) %}
         <li{% if alt==this.alt %} class="active" {% endif %}>
           <a href="{{ '.' | url(alt=alt) }}">{{ bag('translate', alt, '_name') }}</a>
