@@ -1,14 +1,37 @@
 *,
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
 }
 
-img {
+body * {
+  line-height: calc(1em + 0.5rem);
+}
+
+body > * {
+  padding: 0.5rem 1em;
+}
+
+main {
+  flex-grow: 1;
+  max-width: 60ch;
+  margin: auto;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
   max-width: 100%;
   height: auto;
 }
@@ -21,51 +44,45 @@ th {
   text-align: left;
 }
 
-html:focus-within {
-  scroll-behavior: smooth;
+td,
+th {
+  padding: 0.25rem 0.5rem;
 }
 
-/* Navbar */
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, monospace;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
 
 nav a {
   text-decoration: none;
 }
 
 nav ul {
-  --item-height: 2em;
-
-  padding: 0;
-  list-style-type: none;
-}
-
-nav li {
   display: inline-flex;
-  position: relative;
-  align-items: center;
-  height: var(--item-height);
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-nav li ul {
-  display: none;
-  position: absolute;
-  z-index: 2;
-  top: var(--item-height);
-  left: 0;
-  white-space: nowrap;
-}
-
-nav li:hover ul {
-  display: unset;
-}
-
-nav li li {
-  display: flex;
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 @media (prefers-reduced-motion: reduce) {
   *,
-  ::before,
-  ::after {
+  *::before,
+  *::after {
     transition-duration: 0s !important;
     animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
