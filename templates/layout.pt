@@ -38,7 +38,7 @@
   </main>
 
   <footer>
-    <small tal:content="{{ bag('site', this.alt, 'license') }}">Copyright and license</small>
+    <small tal:content="bag('site', this.alt, 'license')">Copyright and license</small>
   </footer>
 </body>
 </html>
