@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="${ bag('site', this.alt, 'description') }"/>
+  <meta name="keywords" content="${ bag('site', this.alt, 'keywords') }"/>
   <title tal:content="this.title + ' — ' + site.env.project.name">Page title</title>
   <link rel="shortcut icon" href="${ '/static/favicon.svg' >> url }" type="image/svg"/>
   <link rel="stylesheet" href="${ '/static/main.css' >> url }"/>
@@ -15,7 +17,7 @@
           <a href="${ '/' >> url(alt=this.alt) }" tal:content="bag('translate', this.alt, 'home')">Home</a>
         </li>
         <li tal:repeat="menu_item [site.get('/' + slug, alt=this.alt)
-                                   for slug in bag('menus', 'main-nav')]"
+                                   for slug in bag('site', 'menus', 'main').split()]"
             tal:attributes="class 'active' if this.is_child_of(menu_item) else None">
           <a href="${ menu_item >> url }" tal:content="menu_item.title">Item title</a>
         </li>
@@ -36,9 +38,7 @@
   </main>
 
   <footer>
-    <small>
-      &copy; AUTHOR, YEAR
-    </small>
+    <small tal:content="{{ bag('site', this.alt, 'license') }}">Copyright and license</small>
   </footer>
 </body>
 </html>
