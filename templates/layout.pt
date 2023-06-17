@@ -12,8 +12,7 @@
     <nav aria-label="main navigation">
       <ul>
         <li>
-          <a href="${ '/' >> url(alt=this.alt) }"
-              tal:content="bag('translate', alt, 'home')">Home</a>
+          <a href="${ '/' >> url(alt=this.alt) }" tal:content="bag('translate', this.alt, 'home')">Home</a>
         </li>
         <li tal:repeat="menu_item [site.get('/' + slug, alt=this.alt)
                                    for slug in bag('menus', 'main-nav')]"
@@ -25,8 +24,8 @@
 
     <nav class="alternatives">
       <ul>
-        <li tal:repeat="alt get_alts(this)" tal:attributes="class 'active' if alt == this.alt else None">
-          <a href="${ '.' >> url(alt=alt) }" tal:content="bag('translate', alt, '_name')">Language</a>
+        <li tal:repeat="lang get_alts(this)" tal:attributes="class 'active' if lang == this.alt else None">
+          <a href="${ '.' >> url(alt=lang) }" tal:content="bag('translate', lang, '_name')">Language</a>
         </li>
       </ul>
     </nav>

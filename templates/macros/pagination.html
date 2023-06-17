@@ -2,13 +2,13 @@
 <div class="pagination">
   {% if pagination.has_prev %}
   <a href="{{ pagination.prev | url }}">
-    &laquo; {{ bag('translate', alt, 'pagination-prev') }}
+    &laquo; {{ bag('translate', alt, 'pagination_prev') }}
   </a>
   {% endif %}
   {{ pagination.page }}
   {% if pagination.has_next %}
   <a href="{{ pagination.next | url }}">
-    {{ bag('translate', alt, 'pagination-next') }} &raquo;
+    {{ bag('translate', alt, 'pagination_next') }} &raquo;
   </a>
   {% endif %}
 </div>

@@ -12,7 +12,7 @@
     <nav aria-label="main navigation">
       <ul>
         <li>
-          <a href="{{ '/' | url(alt=this.alt) }}">{{ bag('translate', alt, 'home') }}</a>
+          <a href="{{ '/' | url(alt=this.alt) }}">{{ bag('translate', this.alt, 'home') }}</a>
         </li>
         {% for slug in bag('menus', 'main-nav') %}
         {%   set menu_item = site.get('/' + slug, alt=this.alt) %}
@@ -25,9 +25,9 @@
 
     <nav class="alternatives">
       <ul>
-        {% for alt in get_alts(this) %}
-        <li{% if alt==this.alt %} class="active" {% endif %}>
-          <a href="{{ '.' | url(alt=alt) }}">{{ bag('translate', alt, '_name') }}</a>
+        {% for lang in get_alts(this) %}
+        <li{% if lang==this.alt %} class="active" {% endif %}>
+          <a href="{{ '.' | url(alt=lang) }}">{{ bag('translate', lang, '_name') }}</a>
         </li>
         {% endfor %}
       </ul>
