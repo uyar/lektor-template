@@ -1,0 +1,5 @@
+LEKTOR_PATH=$(python -c "import lektor; print(lektor.__path__[0])")
+echo $LEKTOR_PATH
+cat lektor.diff | patch -p 1 -d $LEKTOR_PATH
+#PUBLISHER=$LEKTOR_PATH/publisher.py
+#sed -i "s/\(shutil.rmtree(folder)\)/\1; os.rmdir(base)/g" $PUBLISHER
