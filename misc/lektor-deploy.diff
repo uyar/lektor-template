@@ -1,0 +1,12 @@
++//# sourceMappingURL=app.js.map
+diff -U0 -U 3 -Nrp lektor.orig/publisher.py lektor/publisher.py
+--- lektor.orig/publisher.py	2023-06-18 15:25:11.879270966 +0300
++++ lektor/publisher.py	2023-06-18 15:25:25.779286762 +0300
+@@ -93,6 +93,7 @@ def _temporary_folder(env):
+     finally:
+         try:
+             shutil.rmtree(folder)
++            os.rmdir(base)
+         except (IOError, OSError):
+             pass
+ 
