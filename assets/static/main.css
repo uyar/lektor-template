@@ -6,24 +6,12 @@
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
 }
 
 img,
 svg {
   max-width: 100%;
   height: auto;
-}
-
-table {
-  border-collapse: collapse;
-}
-
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, monospace;
 }
 
 input,
