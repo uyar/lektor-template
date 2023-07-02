@@ -16,8 +16,8 @@
         <li>
           <a href="{{ '/' | url(alt=this.alt) }}">{{ bag('translations', this.alt, 'home') }}</a>
         </li>
-        {% for slug in bag('site', 'menus', 'main').split() %}
-        {%   set menu_item = site.get('/' + slug, alt=this.alt) %}
+        {% for slug in bag('menus', 'main-nav') %}
+          {% set menu_item = site.get('/' + slug, alt=this.alt) %}
         <li{% if this.is_child_of(menu_item) %} class="active" {% endif %}>
           <a href="{{ menu_item | url }}">{{ menu_item.title }}</a>
         </li>

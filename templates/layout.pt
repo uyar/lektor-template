@@ -17,7 +17,7 @@
           <a href="${ '/' >> url(alt=this.alt) }" tal:content="bag('translations', this.alt, 'home')">Home</a>
         </li>
         <li tal:repeat="menu_item [site.get('/' + slug, alt=this.alt)
-                                   for slug in bag('site', 'menus', 'main').split()]"
+                                   for slug in bag('menus', 'main-nav')]"
             tal:attributes="class 'active' if this.is_child_of(menu_item) else None">
           <a href="${ menu_item >> url }" tal:content="menu_item.title">Item title</a>
         </li>
