@@ -14,7 +14,7 @@
     <nav aria-label="main navigation">
       <ul>
         <li>
-          <a href="{{ '/' | url(alt=this.alt) }}">{{ bag('translate', this.alt, 'home') }}</a>
+          <a href="{{ '/' | url(alt=this.alt) }}">{{ bag('translations', this.alt, 'home') }}</a>
         </li>
         {% for slug in bag('site', 'menus', 'main').split() %}
         {%   set menu_item = site.get('/' + slug, alt=this.alt) %}
@@ -29,7 +29,7 @@
       <ul>
         {% for lang in get_alts(this) %}
         <li{% if lang==this.alt %} class="active" {% endif %}>
-          <a href="{{ '.' | url(alt=lang) }}">{{ bag('translate', lang, '_name') }}</a>
+          <a href="{{ '.' | url(alt=lang) }}">{{ bag('translations', lang, '_name') }}</a>
         </li>
         {% endfor %}
       </ul>
