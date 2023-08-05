@@ -27,7 +27,7 @@
     <nav class="alternatives">
       <ul>
         <li tal:repeat="lang get_alts(this)" tal:attributes="class 'active' if lang == this.alt else None">
-          <a href="${ '.' >> url(alt=lang) }" tal:content="bag('translations', lang, '_name')">Language</a>
+          <a href="${ '.' >> url(alt=lang) }" tal:content="this.pad.db.config['ALTERNATIVES'][lang].name[lang]">Language</a>
         </li>
       </ul>
     </nav>

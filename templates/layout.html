@@ -29,7 +29,7 @@
       <ul>
         {% for lang in get_alts(this) %}
         <li{% if lang==this.alt %} class="active" {% endif %}>
-          <a href="{{ '.' | url(alt=lang) }}">{{ bag('translations', lang, '_name') }}</a>
+          <a href="{{ '.' | url(alt=lang) }}">{{ this.pad.db.config['ALTERNATIVES'][lang].name[lang] }}</a>
         </li>
         {% endfor %}
       </ul>
