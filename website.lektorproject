@@ -13,6 +13,3 @@ name = Turkish
 name[tr] = Türkçe
 locale = tr_TR
 url_prefix = /tr/
-
-[packages]
-# lektor-chameleon = 0.7
