@@ -1,9 +1,0 @@
-<div class="pagination">
-  <a tal:condition="this.pagination.has_prev" href="${ pagination.prev >> url }">
-    &laquo; ${ bag('translations', alt, 'pagination-prev') }
-  </a>
-  ${ this.pagination.page }
-  <a tal:condition="this.pagination.has_next" href="${ pagination.next >> url }">
-    ${ bag('translations', alt, 'pagination-next') } &raquo;
-  </a>
-</div>
